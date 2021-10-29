@@ -1,0 +1,75 @@
+
+
+.cover {
+  
+    // background-image: url('../../img/banner3.jpg');
+    //     @extend .backgroundImg;
+    //     z-index: 4;
+    background: linear-gradient(180deg,rgb(238, 173, 130),rgb(134, 79, 122));
+    height: 500px;
+    position: relative;
+    .cover__img{
+        position: absolute;
+        top: 0;
+        left: 50;
+        bottom: 0;
+        right: 0;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .cover__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12%;
+
+        max-width: 500px;
+       
+        h1{
+            @include styleText($color-white-0,$fs-2,$fw-2)
+        }
+        p{
+            @include styleText($color-white-0,$fs-3,$fw-0)
+
+        }
+        .cover__form{
+            .input-group{
+                .form-control{
+                 border: none;
+                 box-shadow: none;
+
+                }
+                .input-group-append{
+                   .input-group-text {
+                   background-color: white;
+                      border: none;
+                      &:hover{
+                   background-color: $color-red-0;
+                   
+
+                      }
+                      &:hover i {
+                          color: $color-white-0;
+                      }
+                    i{
+                        color: $color-red-0;
+                    }
+                   }
+                 
+                }
+            }
+        }
+    }
+    @include responsive("medium"){
+       .cover__content{
+           left: 10%;right: 10%;
+           text-align: center;
+           h1{
+               font-size: 32px;
+           }
+       }
+        
+    }
+}

@@ -1,0 +1,194 @@
+.NavBarUdemy {
+    .NavBarUdemy__left{
+        display: flex;
+        align-items: center;
+
+
+        .navbar-brand {
+            flex-grow: 1;
+            text-align: center;
+            margin-right: 0;
+
+            img{
+                width: 110px;
+            }
+        }
+
+
+        .navbar-categories{
+            flex-grow: 1;
+            text-align: center;
+            @include styleText($color-black-light,$fs-1,$fw-0);
+           cursor: pointer;
+            i {
+               color: $color-gray-3;
+           }
+        }
+
+
+
+
+        .NavBarUdemy__form-search{ 
+            flex-grow: 8;
+            .input-group{
+                background-color: $color-white-cream;
+                input{
+                    background-color: transparent;
+                    border-color: transparent;
+                    box-shadow: none;
+                    transition: all 0;
+                    color: #505763;
+                    
+                    &:focus {
+                        background-color:$color-white-0;
+                        border-top-color: $color-gray-4;
+                        border-bottom-color: $color-gray-4;
+                        border-left-color: $color-gray-4;
+
+                    };
+                    &:focus + .input-group-append {
+                        .input-group-text{
+
+                            background-color: $color-white-0;
+                            border-top-color: $color-gray-4;
+                            border-bottom-color: $color-gray-4;
+                            border-right-color: $color-gray-4;
+                            color: $color-red-0;
+                            &:hover{
+                            color: $color-white-0;
+                            background-color:$color-red-0 ;
+    
+                            }
+                        }
+                    }
+                    
+                }
+                .input-group-append{
+                    .input-group-text{
+
+                        background-color: transparent;
+                        border-color: transparent;
+                        color: $color-red-0;
+                        &:hover{
+                        color: $color-white-0;
+                        background-color:$color-red-0 ;
+
+                        }
+                    }
+                }
+
+            }
+            
+            
+        }
+    }
+    .NavBarUdemy__right{
+     
+     .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+         .nav-item{
+             display: flex;
+             position: relative;
+             .nav-link {
+            @include styleText($color-black-light,$fs-1,$fw-0);
+             
+             }
+             .sub-item{
+                position : absolute;
+                top: 130%;
+                background-color:$color-white-0;
+                width: 300px;
+                border: 1px solid rgba(0,0,0,0.2);
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+                padding : 12px 20px;
+                right: 0;
+                z-index: 1;
+                &::after {
+                    content: '';
+                    display: none;
+                    border-width: 26px 22px;
+                    border-color: transparent transparent red transparent;
+                    border-style: solid;
+                    position:absolute;
+                    top: -39px;
+                    right : 18px;
+                   
+                }
+
+                p {
+                    text-align: center;
+                    margin-bottom: 10px;
+                font-size: $fs-0 - 2;
+
+                }
+                a{
+                font-size: $fs-0 - 2;
+
+                }
+            }
+         }
+         .nav-item-dropdown{
+             &:hover{
+                 background-color: $color-gray-2;
+             }
+             &:hover .sub-item {
+                   display: flex;
+             }
+         }
+         .navBarUdemy__shoppingcart {
+            .nav-link {
+                      font-size : $fs-3 + 2 ;
+                     margin-right: 8px;              
+                 }
+         }
+     }
+    }
+
+    @include responsive("extra-large"){
+        .nav-item-dropdown-link{
+            display:none;
+
+        }
+        .navbar-toggler{
+            display:none;
+        }
+    }
+    @include responsive("large"){
+        .navbar-nav{
+            flex-direction: row;
+        }
+    }
+    @include responsive("medium"){
+        .NavBarUdemy__form-search{
+            display: none;
+        }
+        .navbar-categories{
+            display: none;
+        }
+        .navbar-toggler{
+            display:block;
+        }
+        .hide{
+            display: none!important;
+        }
+    }
+    @include responsive("small"){
+       .NavBarUdemy__form-search{
+           display: none;
+       }
+       .hide{
+        display: none!important;
+    }
+      
+    }
+    
+}
+
+
+// responsive

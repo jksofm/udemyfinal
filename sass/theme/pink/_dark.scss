@@ -1,0 +1,165 @@
+
+body{
+    position: relative;
+}
+html[data-theme="dark"]{
+ body{
+    background-color:$color-blue-1;
+
+ }
+    // header
+    .NavBarUdemy {
+        background-color: $color-blue-1;
+        .NavBarUdemy__left{
+            .navbar-brand{
+                img{
+                    z-index: 2;
+                    fill : red;
+                   
+                }
+            }
+            .navbar-categories{
+                color: white;
+            }
+            .NavBarUdemy__form-search{ 
+                .input-group{
+                    background-color:$color-blue-2 ;
+                    input{
+                        color:$color-white-0;
+                    }
+               }
+            }
+
+        }
+        .nav-link{
+            color: white!important;
+        }
+    }
+
+    // course
+    .courses .courses__content #myTab .nav-link{
+        color: white!important;
+    }
+    .courses .courses__content #myTab .nav-link.active{
+        color : black !important;
+    }
+    .courses{
+        .courses__content{
+            .course__left{
+                background-color: $color-blue-2;
+                h2{
+                    color: white;
+             }
+             p{
+                 color: white;
+ 
+             }
+            }
+            
+           
+        }
+    }
+
+    // view
+    .viewing{
+        .viewing__content{
+            h2{
+                color: white;
+            }
+        }
+    }
+    // categories
+    .categories{
+        
+        h2{
+        @include styleText($color-white-0,$fs-5,$fw-1)
+        }
+        .categories__item{
+            color : white;
+            border: 1px solid rgba(190, 33, 164, 0.6);
+            background-color: $color-blue-2;
+            &:hover {
+                box-shadow: 0 3px 3px rgba(211, 42, 146, 0.7);
+            }
+        }
+
+    
+    }
+
+    // students
+    .students{
+        h2{
+            color: white;
+        }
+    }
+    .comments{
+        background-color: $color-blue-2;
+        p{
+            color: white!important;
+        
+        }
+        h3{
+            color : white;
+        }
+    }
+
+    // partners
+    .partners{
+        background-color : $color-blue-2;
+        .partners__content{
+            .partners__brand{
+                img{
+                    fill: white !important;
+                }
+            }
+            h2{
+                color: white;
+            }
+        }
+    }
+    // jobs
+    .jobs{
+        background-color : $color-blue-2;
+        h3{
+color : white !important;
+        }
+        p{
+            color : white !important;
+
+        }
+    }
+
+    // footer
+    footer{
+        a{
+            color: white !important;
+        }
+        .footer__policy{
+            color : white !important;
+        }
+    }
+    //  card
+    .card{
+        background-color : $color-blue-2;
+        .card-body{
+            .card-title{
+                color: white !important;
+            }
+            .card-text{
+                color: white !important;
+            }
+            .card__rating{
+                span{
+                    color: white !important;
+                }
+            }
+            .card__price{
+                span{
+                    color: white !important;
+                }
+            }
+        }
+    }
+
+    
+}

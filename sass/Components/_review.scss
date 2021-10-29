@@ -1,0 +1,38 @@
+.comments{
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.2);
+    height: 250px;
+    .students__name{
+        display:flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        .students__img{
+            margin-right: 16px;
+            img{
+                max-height: 54px;
+                max-width: 54px;
+                border-radius:50%
+            }
+
+        }
+        .students__rating{
+            h3{
+                font-size: 14px;
+                color: black;
+                font-weight:600;
+                margin-bottom: 0;
+            }
+            span{
+                i{
+                    font-size:8px;
+                   color: yellow;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    p{
+        font-size:14px;
+        color:black;
+    }
+}

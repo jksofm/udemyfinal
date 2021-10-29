@@ -1,0 +1,50 @@
+.button--white{
+    margin-right: 4px;
+@include styleButton($color-gray-0,$color-white-0,$color-black-light,$fs-0,$fw-1,$pd-0,$pd-0);
+&:hover {
+    @include hoverButton($color-black-0,transparent,$color-black-0);
+
+}
+
+}
+
+
+.button--red{
+    @include styleButton($color-white-0,$color-red-0,$color-red-0,$fs-0,$fw-1,$pd-0,$pd-0);
+&:hover {
+    @include hoverButton($color-white-0,$color-red-1,$color-red-1);
+
+}
+}
+
+
+
+.button-box{
+    width:100px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 1px 0 10px 0;
+    background-image: url(../../../img/button.png);
+    background-size: cover;
+    box-shadow: 2px 1px 5px -1px #000000;
+    box-shadow: inset 1px 0px 2px 0px #a3a2a2,
+                       2px 0px 2px -1px #a3a2a2;
+    background-color: #fff;
+    border: 3px inset #f70a80;
+    position: fixed;
+    right: 0;
+    top: 30%;
+    cursor: pointer;
+    z-index: 2;
+}
+#toggle{
+    transform: translateX(0px);
+    width: 35px;height: 35px;
+    border-radius: 50%;
+    margin : 4px 0px 1px 5px;
+    background-color: #f70a80;
+    transition: .3s;
+    box-shadow:  1px 1px 4px 1px #a3a2a2,
+                2px 0px 4px 1px #a3a2a2;
+    
+}

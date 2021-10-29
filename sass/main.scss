@@ -1,0 +1,45 @@
+@import './Helpers/variables';
+@import './Helpers/mixin';
+@import './Helpers/extend';
+
+
+
+// Vendor
+
+
+@import './base/reset';
+@import './base/customize';
+
+
+@import './layouts/footer';
+@import './layouts/header';
+@import './layouts/intro';
+@import './layouts/courses';
+@import './layouts/viewing';
+@import './layouts/categories';
+@import './layouts/students';
+@import './layouts/partners';
+@import './layouts/jobs';
+
+
+
+
+
+
+
+
+@import './Components/button';
+@import './Components/cover';
+@import './Components/card';
+@import './Components/banner';
+@import './Components/review';
+
+
+@import './Pages/home';
+
+
+// Theme
+
+@import'./theme/pink/dark';
+
+

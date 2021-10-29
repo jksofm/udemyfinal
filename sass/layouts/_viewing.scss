@@ -1,0 +1,29 @@
+.viewing{
+    .viewing__content{
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 22px;
+        h2{
+            font-size: 18px;
+            
+        }
+    }
+    @include responsive("large"){
+        .card{
+            height:360px!important;
+        }
+        
+    }
+    @include responsive("medium"){
+        .card{
+            height:340px!important;
+        }
+        
+    }
+    @include responsive("small"){
+        .card{
+            height:350px!important;
+        }
+        
+    }
+}
